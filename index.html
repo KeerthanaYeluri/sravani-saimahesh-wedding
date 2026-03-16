@@ -445,7 +445,6 @@
         <li><a href="#countdown">Countdown</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#video">Photos</a></li>
         <li><a href="#rsvp">Wishes</a></li>
       </ul>
     </div>
@@ -617,50 +616,6 @@
     <img src="" alt="Gallery Image" id="lightboxImg">
   </div>
 
-  <!-- Photos Showcase -->
-  <section class="video-section section" id="video">
-    <div class="container">
-      <h2 class="section-title animate-on-scroll">Our Story</h2>
-      <p class="section-subtitle animate-on-scroll">A Glimpse of Our Beautiful Journey</p>
-      <div class="video-container animate-on-scroll">
-        <div class="slideshow" id="slideshow">
-          <div class="slide active" data-ken="1">
-            <img src="assets/images/sravani.JPG" alt="Sravani">
-            <div class="slide-overlay">
-              <div class="slide-text">Sravani</div>
-              <div class="slide-subtext">THE BEAUTIFUL BRIDE</div>
-            </div>
-          </div>
-          <div class="slide" data-ken="2">
-            <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
-            <div class="slide-overlay">
-              <div class="slide-text">Sai Mahesh</div>
-              <div class="slide-subtext">THE HANDSOME GROOM</div>
-            </div>
-          </div>
-          <div class="slide" data-ken="1">
-            <img src="assets/images/sravani.JPG" alt="Sravani">
-            <div class="slide-overlay">
-              <div class="slide-text">Sravani & Sai Mahesh</div>
-              <div class="slide-subtext">NOVEMBER 27, 2025 &bull; FOREVER TOGETHER</div>
-            </div>
-          </div>
-          <div class="slide" data-ken="2">
-            <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
-            <div class="slide-overlay">
-              <div class="slide-text">Two Souls, One Love</div>
-              <div class="slide-subtext">A JOURNEY WRITTEN IN THE STARS</div>
-            </div>
-          </div>
-          <div class="slideshow-play-btn" id="slideshowPlayBtn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <div class="slideshow-progress" id="slideshowProgress"></div>
-          <div class="slideshow-controls" id="slideshowDots"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Wishes -->
   <section class="rsvp section" id="rsvp">
@@ -754,58 +709,6 @@
       document.getElementById('lightboxClose').addEventListener('click', function() { lb.classList.remove('active'); });
       lb.addEventListener('click', function(e) { if (e.target === lb) lb.classList.remove('active'); });
       document.addEventListener('keydown', function(e) { if (e.key === 'Escape') lb.classList.remove('active'); });
-    })();
-
-    // Slideshow
-    (function() {
-      var slideshow = document.getElementById('slideshow');
-      var slides = slideshow.querySelectorAll('.slide');
-      var playBtn = document.getElementById('slideshowPlayBtn');
-      var progressBar = document.getElementById('slideshowProgress');
-      var dotsContainer = document.getElementById('slideshowDots');
-      var currentSlide = 0, isPlaying = false, slideInterval = null;
-      var slideDuration = 5000;
-
-      slides.forEach(function(_, i) {
-        var dot = document.createElement('div');
-        dot.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
-        dot.addEventListener('click', function(e) { e.stopPropagation(); goToSlide(i); });
-        dotsContainer.appendChild(dot);
-      });
-
-      function goToSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        dotsContainer.children[currentSlide].classList.remove('active');
-        currentSlide = index;
-        var ken = slides[currentSlide].getAttribute('data-ken');
-        var img = slides[currentSlide].querySelector('img');
-        img.style.animation = 'none'; void img.offsetHeight;
-        img.style.animation = ken === '2' ? 'kenBurns2 6s ease-in-out forwards' : 'kenBurns 6s ease-in-out forwards';
-        slides[currentSlide].classList.add('active');
-        dotsContainer.children[currentSlide].classList.add('active');
-        resetProgress();
-      }
-
-      function resetProgress() {
-        progressBar.style.transition = 'none'; progressBar.style.width = '0%';
-        void progressBar.offsetHeight;
-        progressBar.style.transition = 'width ' + slideDuration + 'ms linear';
-        progressBar.style.width = '100%';
-      }
-
-      function startSlideshow() {
-        isPlaying = true; playBtn.classList.add('hidden'); resetProgress();
-        slideInterval = setInterval(function() { goToSlide((currentSlide + 1) % slides.length); }, slideDuration);
-      }
-
-      function stopSlideshow() {
-        isPlaying = false; playBtn.classList.remove('hidden');
-        clearInterval(slideInterval);
-        progressBar.style.transition = 'none'; progressBar.style.width = '0%';
-      }
-
-      playBtn.addEventListener('click', function(e) { e.stopPropagation(); startSlideshow(); });
-      slideshow.addEventListener('click', function() { if (isPlaying) stopSlideshow(); else startSlideshow(); });
     })();
 
     // Music
