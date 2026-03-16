@@ -261,23 +261,13 @@
       max-width: 700px; margin: 0 auto;
     }
     .showcase-card {
-      border-radius: 15px; overflow: hidden; background: var(--white);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.15); transition: transform 0.3s;
-      text-align: center;
+      border-radius: 15px; overflow: hidden;
+      border: 3px solid var(--gold);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
     }
-    .showcase-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .showcase-card:hover { transform: translateY(-5px); }
     .showcase-card img { width: 100%; height: 280px; object-fit: cover; object-position: center top; display: block; }
-    .showcase-card .card-name {
-      padding: 12px 10px;
-      font-family: var(--font-script); font-size: 1.4rem; color: var(--maroon);
-    }
-    .showcase-together {
-      grid-column: 1 / -1; text-align: center; margin-top: 15px; padding: 20px;
-      background: rgba(255,255,255,0.06); border-radius: 15px;
-      border: 2px solid rgba(212,168,67,0.3);
-    }
-    .showcase-together h3 { font-family: var(--font-script); font-size: 1.8rem; color: var(--gold); margin-bottom: 5px; }
-    .showcase-together p { font-family: var(--font-serif); font-size: 0.9rem; color: var(--gold-light); letter-spacing: 2px; }
 
     /* ===== RSVP ===== */
     .rsvp { background: var(--cream); text-align: center; }
@@ -587,15 +577,9 @@
       <div class="showcase-grid animate-on-scroll">
         <div class="showcase-card">
           <img src="assets/images/sravani.JPG" alt="Sravani">
-          <div class="card-name">Sravani</div>
         </div>
         <div class="showcase-card">
           <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
-          <div class="card-name">Sai Mahesh</div>
-        </div>
-        <div class="showcase-together">
-          <h3>Two Souls, One Love</h3>
-          <p>NOVEMBER 27, 2025 &bull; FOREVER TOGETHER</p>
         </div>
       </div>
     </div>
