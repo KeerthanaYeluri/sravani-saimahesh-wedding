@@ -771,166 +771,96 @@
       box-shadow: 0 0 40px rgba(212, 168, 67, 0.2);
     }
 
-    /* Cinematic Slideshow */
-    .slideshow {
-      position: relative;
-      aspect-ratio: 16/9;
-      background: #000;
+    /* Photo Showcase - Always Visible */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .showcase-card {
+      border-radius: 20px;
       overflow: hidden;
-      cursor: pointer;
-    }
-
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1.5s ease-in-out;
-    }
-
-    .slide.active {
-      opacity: 1;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .slide.active img {
-      animation: kenBurns 6s ease-in-out forwards;
-    }
-
-    .slide-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding-bottom: 40px;
-    }
-
-    .slide-text {
-      color: var(--gold);
-      font-family: var(--font-script);
-      font-size: 2.5rem;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideTextIn 1s ease 0.5s forwards;
-    }
-
-    .slide-subtext {
-      color: var(--white);
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      letter-spacing: 3px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-      margin-top: 8px;
-      opacity: 0;
-      animation: slideTextIn 1s ease 1s forwards;
-    }
-
-    /* Slideshow Controls */
-    .slideshow-controls {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      z-index: 10;
-    }
-
-    .slideshow-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.4);
-      border: 1px solid var(--gold);
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .slideshow-dot.active {
-      background: var(--gold);
-      transform: scale(1.3);
-    }
-
-    .slideshow-play-btn {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 70px;
-      height: 70px;
       border: 3px solid var(--gold);
-      border-radius: 50%;
-      background: rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      transition: all 0.3s;
-      backdrop-filter: blur(5px);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+      position: relative;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
-    .slideshow-play-btn:hover {
-      transform: translate(-50%, -50%) scale(1.1);
-      box-shadow: 0 0 30px var(--gold-glow);
+    .showcase-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
 
-    .slideshow-play-btn.hidden {
-      opacity: 0;
-      pointer-events: none;
+    .showcase-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
     }
 
-    .slideshow-play-btn svg {
-      width: 28px;
-      height: 28px;
-      fill: var(--gold);
-      margin-left: 4px;
+    .showcase-card:hover img {
+      transform: scale(1.05);
     }
 
-    /* Progress bar */
-    .slideshow-progress {
+    .showcase-label {
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 3px;
-      background: var(--gold);
-      z-index: 10;
-      transition: width linear;
+      right: 0;
+      background: linear-gradient(to top, rgba(128, 0, 32, 0.85) 0%, transparent 100%);
+      padding: 40px 20px 20px;
+      text-align: center;
     }
 
-    @keyframes kenBurns {
-      0% { transform: scale(1) translate(0, 0); }
-      100% { transform: scale(1.15) translate(-2%, -2%); }
+    .showcase-label h3 {
+      color: var(--gold);
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
 
-    @keyframes kenBurns2 {
-      0% { transform: scale(1.1) translate(-3%, 0); }
-      100% { transform: scale(1) translate(0, 0); }
+    .showcase-label p {
+      color: var(--gold-light);
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      margin-top: 5px;
     }
 
-    @keyframes slideTextIn {
-      to { opacity: 1; transform: translateY(0); }
+    .showcase-together {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 20px;
+      padding: 30px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 20px;
+      border: 2px solid rgba(212, 168, 67, 0.3);
+    }
+
+    .showcase-together h3 {
+      font-family: var(--font-script);
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .showcase-together p {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      letter-spacing: 3px;
     }
 
     @media (max-width: 768px) {
-      .slide-text { font-size: 1.8rem; }
-      .slide-subtext { font-size: 0.8rem; }
-      .slideshow-play-btn { width: 55px; height: 55px; }
-      .slideshow-play-btn svg { width: 22px; height: 22px; }
+      .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .showcase-label h3 { font-size: 1.8rem; }
+      .showcase-together h3 { font-size: 2rem; }
     }
 
     /* ========== RSVP Section ========== */
@@ -1510,51 +1440,27 @@
     <div class="container">
       <h2 class="section-title animate-on-scroll">Our Story</h2>
       <p class="section-subtitle animate-on-scroll">A Glimpse of Our Beautiful Journey</p>
-      <div class="video-container animate-on-scroll">
-        <div class="slideshow" id="slideshow">
-          <!-- Slide 1 - Sravani -->
-          <div class="slide active" data-ken="1">
-            <img src="assets/images/sravani.JPG" alt="Sravani">
-            <div class="slide-overlay">
-              <div class="slide-text">Sravani</div>
-              <div class="slide-subtext">THE BEAUTIFUL BRIDE</div>
-            </div>
+      <div class="showcase-grid animate-on-scroll">
+        <!-- Sravani -->
+        <div class="showcase-card">
+          <img src="assets/images/sravani.JPG" alt="Sravani">
+          <div class="showcase-label">
+            <h3>Sravani</h3>
+            <p>THE BRIDE</p>
           </div>
-          <!-- Slide 2 - Sai Mahesh -->
-          <div class="slide" data-ken="2">
-            <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
-            <div class="slide-overlay">
-              <div class="slide-text">Sai Mahesh</div>
-              <div class="slide-subtext">THE HANDSOME GROOM</div>
-            </div>
+        </div>
+        <!-- Sai Mahesh -->
+        <div class="showcase-card">
+          <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
+          <div class="showcase-label">
+            <h3>Sai Mahesh</h3>
+            <p>THE GROOM</p>
           </div>
-          <!-- Slide 3 - Together -->
-          <div class="slide" data-ken="1">
-            <img src="assets/images/sravani.JPG" alt="Sravani">
-            <div class="slide-overlay">
-              <div class="slide-text">Sravani & Sai Mahesh</div>
-              <div class="slide-subtext">NOVEMBER 27, 2025 &bull; FOREVER TOGETHER</div>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="slide" data-ken="2">
-            <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
-            <div class="slide-overlay">
-              <div class="slide-text">Two Souls, One Love</div>
-              <div class="slide-subtext">A JOURNEY WRITTEN IN THE STARS</div>
-            </div>
-          </div>
-
-          <!-- Play Button -->
-          <div class="slideshow-play-btn" id="slideshowPlayBtn">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-
-          <!-- Progress Bar -->
-          <div class="slideshow-progress" id="slideshowProgress"></div>
-
-          <!-- Dots -->
-          <div class="slideshow-controls" id="slideshowDots"></div>
+        </div>
+        <!-- Together text -->
+        <div class="showcase-together">
+          <h3>Two Souls, One Love</h3>
+          <p>NOVEMBER 27, 2025 &bull; FOREVER TOGETHER</p>
         </div>
       </div>
     </div>
@@ -1717,100 +1623,6 @@
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
           lightbox.classList.remove('active');
-        }
-      });
-    })();
-
-    // ===== Cinematic Slideshow =====
-    (function() {
-      const slideshow = document.getElementById('slideshow');
-      const slides = slideshow.querySelectorAll('.slide');
-      const playBtn = document.getElementById('slideshowPlayBtn');
-      const progressBar = document.getElementById('slideshowProgress');
-      const dotsContainer = document.getElementById('slideshowDots');
-      let currentSlide = 0;
-      let isPlaying = false;
-      let slideInterval = null;
-      let progressInterval = null;
-      const slideDuration = 5000; // 5 seconds per slide
-
-      // Create dots
-      slides.forEach(function(_, i) {
-        const dot = document.createElement('div');
-        dot.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
-        dot.addEventListener('click', function(e) {
-          e.stopPropagation();
-          goToSlide(i);
-        });
-        dotsContainer.appendChild(dot);
-      });
-
-      function goToSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        dotsContainer.children[currentSlide].classList.remove('active');
-
-        currentSlide = index;
-
-        // Alternate Ken Burns direction
-        var kenType = slides[currentSlide].getAttribute('data-ken');
-        slides[currentSlide].querySelector('img').style.animation = 'none';
-        void slides[currentSlide].querySelector('img').offsetHeight;
-        slides[currentSlide].querySelector('img').style.animation =
-          kenType === '2' ? 'kenBurns2 6s ease-in-out forwards' : 'kenBurns 6s ease-in-out forwards';
-
-        // Reset text animations
-        var texts = slides[currentSlide].querySelectorAll('.slide-text, .slide-subtext');
-        texts.forEach(function(t) {
-          t.style.animation = 'none';
-          void t.offsetHeight;
-          t.style.animation = '';
-        });
-
-        slides[currentSlide].classList.add('active');
-        dotsContainer.children[currentSlide].classList.add('active');
-        resetProgress();
-      }
-
-      function nextSlide() {
-        goToSlide((currentSlide + 1) % slides.length);
-      }
-
-      function resetProgress() {
-        progressBar.style.transition = 'none';
-        progressBar.style.width = '0%';
-        void progressBar.offsetHeight;
-        progressBar.style.transition = 'width ' + slideDuration + 'ms linear';
-        progressBar.style.width = '100%';
-      }
-
-      function startSlideshow() {
-        isPlaying = true;
-        playBtn.classList.add('hidden');
-        resetProgress();
-        slideInterval = setInterval(nextSlide, slideDuration);
-      }
-
-      function stopSlideshow() {
-        isPlaying = false;
-        playBtn.classList.remove('hidden');
-        playBtn.querySelector('svg').innerHTML = '<path d="M8 5v14l11-7z"/>';
-        clearInterval(slideInterval);
-        progressBar.style.transition = 'none';
-        progressBar.style.width = '0%';
-      }
-
-      playBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (!isPlaying) {
-          startSlideshow();
-        }
-      });
-
-      slideshow.addEventListener('click', function() {
-        if (isPlaying) {
-          stopSlideshow();
-        } else {
-          startSlideshow();
         }
       });
     })();
