@@ -4,14 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Wedding celebration of Sravani & Sai Mahesh - November 27, 2025">
-  <meta property="og:title" content="Sravani & Sai Mahesh - Wedding Invitation">
-  <meta property="og:description" content="Celebrating the union of Sravani & Sai Mahesh - November 27, 2025">
   <title>Sravani & Sai Mahesh | November 27, 2025</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* ========== CSS Custom Properties ========== */
     :root {
       --gold: #D4A843;
       --gold-light: #F0D78C;
@@ -28,1194 +25,384 @@
       --font-sans: 'Poppins', sans-serif;
     }
 
-    /* ========== Reset & Base ========== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      color: var(--dark-text);
-      background: var(--ivory);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .section {
-      padding: 100px 0;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--dark-text); background: var(--ivory); overflow-x: hidden; line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
 
     .section-title {
       font-family: var(--font-script);
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       color: var(--maroon);
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .section-subtitle {
       font-family: var(--font-serif);
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--gold);
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
       letter-spacing: 2px;
     }
 
-    /* ========== Decorative Divider ========== */
     .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px auto 50px;
-      max-width: 400px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 15px auto 40px; max-width: 300px;
     }
-
-    .divider::before,
-    .divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 1px;
       background: linear-gradient(to right, transparent, var(--gold), transparent);
     }
+    .divider span { padding: 0 15px; color: var(--gold); font-size: 1.2rem; }
 
-    .divider span {
-      padding: 0 20px;
-      color: var(--gold);
-      font-size: 1.5rem;
-    }
-
-    /* ========== Navigation ========== */
+    /* ===== Navbar ===== */
     .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 20px 0;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(5px);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 15px 0; transition: all 0.4s ease;
     }
-
     .navbar.scrolled {
-      background: rgba(128, 0, 32, 0.95);
-      padding: 12px 0;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      background: rgba(128, 0, 32, 0.95); padding: 10px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
     }
-
-    .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      font-family: var(--font-script);
-      font-size: 1.8rem;
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-
+    .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-family: var(--font-script); font-size: 1.5rem; color: var(--gold); }
+    .nav-links { display: flex; list-style: none; gap: 25px; }
     .nav-links a {
-      color: var(--white);
-      font-size: 0.9rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      position: relative;
-      padding-bottom: 5px;
-      transition: color 0.3s;
+      color: var(--white); font-size: 0.8rem; font-weight: 400;
+      letter-spacing: 1px; text-transform: uppercase; position: relative;
+      padding-bottom: 3px; transition: color 0.3s;
     }
-
     .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: width 0.3s;
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 2px; background: var(--gold); transition: width 0.3s;
     }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
     .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 5px;
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 5px;
     }
+    .hamburger span { display: block; width: 25px; height: 2px; background: var(--gold); transition: all 0.3s; }
 
-    .hamburger span {
-      display: block;
-      width: 25px;
-      height: 2px;
-      background: var(--gold);
-      transition: all 0.3s;
-    }
-
-    /* ========== Hero Section ========== */
+    /* ===== Hero ===== */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      background: linear-gradient(135deg, rgba(128, 0, 32, 0.85), rgba(139, 0, 0, 0.9)),
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative;
+      background: linear-gradient(135deg, rgba(128,0,32,0.85), rgba(139,0,0,0.9)),
                   linear-gradient(45deg, #800020, #4a0012, #8B0000, #600018);
-      background-size: cover;
       overflow: hidden;
     }
-
     .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        radial-gradient(circle at 20% 50%, rgba(212, 168, 67, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(212, 168, 67, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 50% 80%, rgba(212, 168, 67, 0.06) 0%, transparent 40%);
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(212,168,67,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(212,168,67,0.08) 0%, transparent 40%);
     }
-
-    /* Floating decorative elements */
-    .hero-decoration {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
+    .hero-decoration { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
     .hero-decoration .petal {
-      position: absolute;
-      width: 20px;
-      height: 20px;
+      position: absolute; width: 20px; height: 20px;
       background: radial-gradient(circle, var(--gold-light), transparent);
-      border-radius: 50% 0 50% 0;
-      opacity: 0.15;
-      animation: floatPetal 15s infinite ease-in-out;
+      border-radius: 50% 0 50% 0; opacity: 0.15; animation: floatPetal 15s infinite ease-in-out;
     }
+    .hero-decoration .petal:nth-child(1) { left:10%; top:20%; animation-delay:0s; animation-duration:12s; }
+    .hero-decoration .petal:nth-child(2) { left:30%; top:60%; animation-delay:2s; animation-duration:14s; }
+    .hero-decoration .petal:nth-child(3) { left:70%; top:30%; animation-delay:4s; animation-duration:16s; }
+    .hero-decoration .petal:nth-child(4) { left:85%; top:70%; animation-delay:1s; animation-duration:13s; }
+    .hero-decoration .petal:nth-child(5) { left:50%; top:10%; animation-delay:3s; animation-duration:15s; }
+    .hero-decoration .petal:nth-child(6) { left:20%; top:80%; animation-delay:5s; animation-duration:11s; }
 
-    .hero-decoration .petal:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; animation-duration: 12s; }
-    .hero-decoration .petal:nth-child(2) { left: 30%; top: 60%; animation-delay: 2s; animation-duration: 14s; }
-    .hero-decoration .petal:nth-child(3) { left: 70%; top: 30%; animation-delay: 4s; animation-duration: 16s; }
-    .hero-decoration .petal:nth-child(4) { left: 85%; top: 70%; animation-delay: 1s; animation-duration: 13s; }
-    .hero-decoration .petal:nth-child(5) { left: 50%; top: 10%; animation-delay: 3s; animation-duration: 15s; }
-    .hero-decoration .petal:nth-child(6) { left: 20%; top: 80%; animation-delay: 5s; animation-duration: 11s; }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-    }
-
+    .hero-content { position: relative; z-index: 2; padding: 20px; }
     .hero-invite {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      color: var(--gold-light);
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-      font-weight: 300;
+      font-family: var(--font-serif); font-size: 1rem; color: var(--gold-light);
+      letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-weight: 300;
     }
-
     .hero-names {
-      font-family: var(--font-script);
-      font-size: 6rem;
-      color: var(--gold);
-      text-shadow: 0 0 40px rgba(212, 168, 67, 0.3), 0 4px 8px rgba(0,0,0,0.3);
-      line-height: 1.2;
-      margin-bottom: 10px;
+      font-family: var(--font-script); font-size: 4.5rem; color: var(--gold);
+      text-shadow: 0 0 30px rgba(212,168,67,0.3), 0 3px 6px rgba(0,0,0,0.3);
+      line-height: 1.2; margin-bottom: 10px;
     }
-
     .hero-ampersand {
-      font-family: var(--font-script);
-      font-size: 3rem;
-      color: var(--gold-light);
-      display: block;
-      margin: 5px 0;
+      font-family: var(--font-script); font-size: 2.2rem; color: var(--gold-light);
+      display: block; margin: 3px 0;
     }
-
     .hero-date {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      color: var(--white);
-      letter-spacing: 6px;
-      margin-top: 20px;
-      font-weight: 400;
+      font-family: var(--font-serif); font-size: 1.2rem; color: var(--white);
+      letter-spacing: 5px; margin-top: 15px; font-weight: 400;
     }
-
     .hero-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 30px auto;
-      max-width: 300px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 20px auto; max-width: 250px;
     }
-
-    .hero-divider::before,
-    .hero-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
+    .hero-divider::before, .hero-divider::after {
+      content: ''; flex: 1; height: 1px;
       background: linear-gradient(to right, transparent, var(--gold));
     }
-
-    .hero-divider::after {
-      background: linear-gradient(to left, transparent, var(--gold));
-    }
-
-    .hero-divider span {
-      padding: 0 15px;
-      color: var(--gold);
-      font-size: 1.8rem;
-    }
-
+    .hero-divider::after { background: linear-gradient(to left, transparent, var(--gold)); }
+    .hero-divider span { padding: 0 12px; color: var(--gold); font-size: 1.3rem; }
     .scroll-indicator {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: bounce 2s infinite;
-      z-index: 2;
+      position: absolute; bottom: 30px; left: 50%;
+      transform: translateX(-50%); animation: bounce 2s infinite; z-index: 2;
     }
+    .scroll-indicator svg { width: 25px; height: 25px; fill: var(--gold); opacity: 0.7; }
 
-    .scroll-indicator svg {
-      width: 30px;
-      height: 30px;
-      fill: var(--gold);
-      opacity: 0.7;
+    /* ===== About ===== */
+    .about { background: var(--cream); }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .about-image-wrapper { display: flex; justify-content: center; }
+    .about-image {
+      width: 300px; height: 300px; border-radius: 50%;
+      border: 4px solid var(--gold); overflow: hidden;
+      box-shadow: 0 0 25px var(--gold-glow), 0 8px 30px rgba(0,0,0,0.1);
+      background: var(--maroon);
     }
-
-    /* ========== About Section ========== */
-    .about {
+    .about-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .about-text h3 { font-family: var(--font-script); font-size: 2rem; color: var(--maroon); margin-bottom: 15px; }
+    .about-text p { font-size: 0.95rem; line-height: 1.8; color: #555; margin-bottom: 12px; }
+    .about-names { display: flex; gap: 30px; margin-top: 25px; }
+    .about-person { text-align: center; flex: 1; }
+    .about-person .person-image {
+      width: 100px; height: 100px; border-radius: 50%;
+      border: 3px solid var(--gold); margin: 0 auto 10px; overflow: hidden;
       background: var(--cream);
     }
+    .about-person .person-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .about-person h4 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--maroon); }
+    .about-person p { font-size: 0.85rem; color: var(--gold); font-style: italic; }
 
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-image-wrapper {
-      display: flex;
-      justify-content: center;
-    }
-
-    .about-image {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      border: 5px solid var(--gold);
-      box-shadow: 0 0 30px var(--gold-glow), 0 10px 40px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--maroon), var(--deep-red));
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .about-text h3 {
-      font-family: var(--font-script);
-      font-size: 2.5rem;
-      color: var(--maroon);
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      font-size: 1rem;
-      line-height: 1.9;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .about-names {
-      display: flex;
-      gap: 40px;
-      margin-top: 30px;
-    }
-
-    .about-person {
-      text-align: center;
-      flex: 1;
-    }
-
-    .about-person .person-image {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid var(--gold);
-      margin: 0 auto 15px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--cream), var(--gold-light));
-    }
-
-    .about-person .person-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .about-person h4 {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      color: var(--maroon);
-    }
-
-    .about-person p {
-      font-size: 0.9rem;
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    /* ========== Countdown Section ========== */
+    /* ===== Countdown ===== */
     .countdown {
       background: linear-gradient(135deg, var(--maroon), var(--deep-red));
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      text-align: center; position: relative; overflow: hidden;
     }
-
-    .countdown::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background:
-        radial-gradient(circle at 10% 50%, rgba(212, 168, 67, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 90% 50%, rgba(212, 168, 67, 0.08) 0%, transparent 50%);
-    }
-
-    .countdown .section-title {
-      color: var(--gold);
-    }
-
-    .countdown .section-subtitle {
-      color: var(--gold-light);
-    }
-
-    .countdown-boxes {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-
+    .countdown .section-title { color: var(--gold); }
+    .countdown .section-subtitle { color: var(--gold-light); }
+    .countdown-boxes { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; position: relative; z-index: 1; }
     .countdown-box {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px solid var(--gold);
-      border-radius: 15px;
-      padding: 30px 25px;
-      min-width: 140px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 20px rgba(212, 168, 67, 0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: rgba(255,255,255,0.08); border: 2px solid var(--gold);
+      border-radius: 12px; padding: 20px 18px; min-width: 110px;
+      backdrop-filter: blur(10px); box-shadow: 0 0 15px rgba(212,168,67,0.15);
+      transition: transform 0.3s;
     }
+    .countdown-box:hover { transform: translateY(-4px); }
+    .countdown-number { font-family: var(--font-serif); font-size: 2.8rem; color: var(--gold); font-weight: 700; line-height: 1; }
+    .countdown-label { font-family: var(--font-sans); font-size: 0.75rem; color: var(--gold-light); text-transform: uppercase; letter-spacing: 2px; margin-top: 8px; }
 
-    .countdown-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 30px rgba(212, 168, 67, 0.3);
-    }
-
-    .countdown-number {
-      font-family: var(--font-serif);
-      font-size: 3.5rem;
-      color: var(--gold);
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .countdown-label {
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-top: 10px;
-    }
-
-    .countdown-message {
-      font-family: var(--font-script);
-      font-size: 2.5rem;
-      color: var(--gold);
-      margin-top: 20px;
-    }
-
-    /* ========== Events Timeline Section ========== */
-    .events {
-      background: var(--cream);
-    }
-
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    /* ===== Events Timeline ===== */
+    .events { background: var(--cream); }
+    .timeline { position: relative; max-width: 800px; margin: 0 auto; }
     .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 3px;
-      height: 100%;
+      content: ''; position: absolute; left: 50%; transform: translateX(-50%);
+      width: 2px; height: 100%;
       background: linear-gradient(to bottom, var(--gold), var(--maroon), var(--gold));
-      border-radius: 2px;
     }
-
-    .timeline-item {
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px 0;
-      position: relative;
-      width: 50%;
-    }
-
-    .timeline-item:nth-child(odd) {
-      align-self: flex-start;
-      justify-content: flex-end;
-      padding-right: 50px;
-    }
-
-    .timeline-item:nth-child(even) {
-      align-self: flex-end;
-      margin-left: 50%;
-      justify-content: flex-start;
-      padding-left: 50px;
-    }
-
+    .timeline-item { display: flex; justify-content: flex-end; padding: 15px 0; position: relative; width: 50%; }
+    .timeline-item:nth-child(odd) { align-self: flex-start; justify-content: flex-end; padding-right: 40px; }
+    .timeline-item:nth-child(even) { align-self: flex-end; margin-left: 50%; justify-content: flex-start; padding-left: 40px; }
     .timeline-dot {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: var(--maroon);
-      border: 3px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      top: 30px;
-      z-index: 1;
-      box-shadow: 0 0 15px var(--gold-glow);
+      position: absolute; width: 40px; height: 40px; background: var(--maroon);
+      border: 2px solid var(--gold); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; top: 25px; z-index: 1;
     }
-
-    .timeline-item:nth-child(odd) .timeline-dot {
-      right: -25px;
-    }
-
-    .timeline-item:nth-child(even) .timeline-dot {
-      left: -25px;
-    }
-
+    .timeline-item:nth-child(odd) .timeline-dot { right: -20px; }
+    .timeline-item:nth-child(even) .timeline-dot { left: -20px; }
     .timeline-card {
-      background: var(--white);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-      border-top: 4px solid var(--gold);
-      max-width: 380px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: var(--white); border-radius: 12px; padding: 22px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07); border-top: 3px solid var(--gold);
+      max-width: 340px; transition: transform 0.3s;
     }
+    .timeline-card:hover { transform: translateY(-3px); }
+    .timeline-card h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--maroon); margin-bottom: 5px; }
+    .timeline-card .event-date { font-size: 0.85rem; color: var(--gold); font-weight: 500; margin-bottom: 4px; }
+    .timeline-card .event-venue { font-size: 0.85rem; color: #888; font-style: italic; margin-bottom: 8px; }
+    .timeline-card p { font-size: 0.9rem; color: #666; line-height: 1.6; }
 
-    .timeline-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 35px rgba(0,0,0,0.12);
-    }
-
-    .timeline-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      color: var(--maroon);
-      margin-bottom: 8px;
-    }
-
-    .timeline-card .event-date {
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      color: var(--gold);
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
-
-    .timeline-card .event-venue {
-      font-size: 0.9rem;
-      color: #888;
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
-    .timeline-card p {
-      font-size: 0.95rem;
-      color: #666;
-      line-height: 1.7;
-    }
-
-    /* ========== Gallery Section ========== */
-    .gallery {
-      background: var(--ivory);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
+    /* ===== Gallery ===== */
+    .gallery { background: var(--ivory); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
     .gallery-item {
-      aspect-ratio: 1;
-      border-radius: 15px;
-      overflow: hidden;
-      cursor: pointer;
-      position: relative;
-      background: linear-gradient(135deg, var(--cream), var(--gold-light));
-      border: 2px solid rgba(212, 168, 67, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      transition: transform 0.3s, box-shadow 0.3s;
+      aspect-ratio: 1; border-radius: 12px; overflow: hidden; cursor: pointer;
+      position: relative; background: linear-gradient(135deg, var(--cream), var(--gold-light));
+      border: 2px solid rgba(212,168,67,0.3); display: flex; align-items: center;
+      justify-content: center; transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
+    .gallery-item:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center top; position: absolute; inset: 0; }
     .gallery-item .pin-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(to bottom, transparent 50%, rgba(128, 0, 32, 0.7) 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 15px;
-      z-index: 1;
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to bottom, transparent 50%, rgba(128,0,32,0.7) 100%);
+      opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end;
+      justify-content: center; padding-bottom: 12px;
     }
-
-    .gallery-item:hover .pin-overlay {
-      opacity: 1;
-    }
-
-    .pin-overlay span {
-      color: var(--gold);
-      font-family: var(--font-serif);
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-    }
-
-    .gallery-placeholder {
-      text-align: center;
-      color: var(--maroon);
-      opacity: 0.5;
-    }
-
-    .gallery-placeholder .camera-icon {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      display: block;
-    }
-
-    .gallery-placeholder span {
-      font-family: var(--font-serif);
-      font-size: 0.85rem;
-    }
+    .gallery-item:hover .pin-overlay { opacity: 1; }
+    .pin-overlay span { color: var(--gold); font-family: var(--font-serif); font-size: 0.85rem; letter-spacing: 2px; }
+    .gallery-placeholder { text-align: center; color: var(--maroon); opacity: 0.5; }
+    .gallery-placeholder .camera-icon { font-size: 2rem; margin-bottom: 8px; display: block; }
+    .gallery-placeholder span { font-family: var(--font-serif); font-size: 0.8rem; }
 
     /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; cursor: pointer; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 90vh; border-radius: 10px; }
+    .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 2rem; color: var(--gold); cursor: pointer; background: none; border: none; }
 
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90vh;
-      border-radius: 10px;
-      box-shadow: 0 0 50px rgba(212, 168, 67, 0.3);
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2.5rem;
-      color: var(--gold);
-      cursor: pointer;
-      background: none;
-      border: none;
-      font-family: var(--font-sans);
-    }
-
-    /* ========== Video / Slideshow Section ========== */
+    /* ===== Our Story / Photos ===== */
     .video-section {
-      background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
-      text-align: center;
+      background: linear-gradient(135deg, var(--maroon-dark), var(--maroon)); text-align: center;
     }
-
-    .video-section .section-title {
-      color: var(--gold);
-    }
-
-    .video-section .section-subtitle {
-      color: var(--gold-light);
-    }
-
-    .video-container {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      border: 3px solid var(--gold);
-      box-shadow: 0 0 40px rgba(212, 168, 67, 0.2);
-    }
-
-    /* Photo Showcase - Always Visible */
+    .video-section .section-title { color: var(--gold); }
+    .video-section .section-subtitle { color: var(--gold-light); }
     .showcase-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-      max-width: 800px;
-      margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      max-width: 700px; margin: 0 auto;
     }
-
     .showcase-card {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 3px solid var(--gold);
-      box-shadow: 0 10px 35px rgba(0,0,0,0.3);
-      position: relative;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-radius: 15px; overflow: hidden; border: 3px solid var(--gold);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3); position: relative;
+      transition: transform 0.3s;
     }
-
-    .showcase-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-    }
-
-    .showcase-card img {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .showcase-card:hover img {
-      transform: scale(1.05);
-    }
-
+    .showcase-card:hover { transform: translateY(-5px); }
+    .showcase-card img { width: 100%; height: 280px; object-fit: cover; object-position: center top; display: block; }
     .showcase-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(128, 0, 32, 0.85) 0%, transparent 100%);
-      padding: 40px 20px 20px;
-      text-align: center;
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(128,0,32,0.85) 0%, transparent 100%);
+      padding: 30px 15px 15px; text-align: center;
     }
-
-    .showcase-label h3 {
-      color: var(--gold);
-      font-family: var(--font-script);
-      font-size: 1.6rem;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
-
-    .showcase-label p {
-      color: var(--gold-light);
-      font-family: var(--font-serif);
-      font-size: 0.9rem;
-      letter-spacing: 3px;
-      margin-top: 5px;
-    }
-
+    .showcase-label h3 { color: var(--gold); font-family: var(--font-script); font-size: 1.5rem; }
+    .showcase-label p { color: var(--gold-light); font-family: var(--font-serif); font-size: 0.75rem; letter-spacing: 2px; margin-top: 3px; }
     .showcase-together {
-      grid-column: 1 / -1;
-      text-align: center;
-      margin-top: 20px;
-      padding: 30px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 20px;
-      border: 2px solid rgba(212, 168, 67, 0.3);
+      grid-column: 1 / -1; text-align: center; margin-top: 15px; padding: 20px;
+      background: rgba(255,255,255,0.06); border-radius: 15px;
+      border: 2px solid rgba(212,168,67,0.3);
     }
+    .showcase-together h3 { font-family: var(--font-script); font-size: 1.8rem; color: var(--gold); margin-bottom: 5px; }
+    .showcase-together p { font-family: var(--font-serif); font-size: 0.9rem; color: var(--gold-light); letter-spacing: 2px; }
 
-    .showcase-together h3 {
-      font-family: var(--font-script);
-      font-size: 1.8rem;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
-
-    .showcase-together p {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      color: var(--gold-light);
-      letter-spacing: 3px;
-    }
-
-    @media (max-width: 768px) {
-      .showcase-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-      .showcase-label h3 { font-size: 1.8rem; }
-      .showcase-together h3 { font-size: 2rem; }
-    }
-
-    /* ========== RSVP Section ========== */
-    .rsvp {
-      background: var(--cream);
-      text-align: center;
-    }
-
-    .rsvp-content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .rsvp-text {
-      font-family: var(--font-serif);
-      font-size: 1.15rem;
-      color: #555;
-      line-height: 1.8;
-      margin-bottom: 40px;
-    }
-
-    .rsvp-contact {
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1rem;
-      color: var(--dark-text);
-    }
-
+    /* ===== RSVP ===== */
+    .rsvp { background: var(--cream); text-align: center; }
+    .rsvp-content { max-width: 550px; margin: 0 auto; }
+    .rsvp-text { font-family: var(--font-serif); font-size: 1rem; color: #555; line-height: 1.8; margin-bottom: 30px; }
+    .rsvp-contact { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+    .contact-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
     .contact-icon {
-      width: 45px;
-      height: 45px;
-      background: var(--maroon);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 40px; height: 40px; background: var(--maroon); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
     }
-
-    .contact-icon svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--gold);
-    }
-
+    .contact-icon svg { width: 18px; height: 18px; fill: var(--gold); }
     .rsvp-btn {
-      display: inline-block;
-      padding: 16px 50px;
+      display: inline-block; padding: 14px 40px;
       background: linear-gradient(135deg, var(--maroon), var(--deep-red));
-      color: var(--gold);
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      border: 2px solid var(--gold);
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-decoration: none;
+      color: var(--gold); font-family: var(--font-serif); font-size: 1rem;
+      letter-spacing: 2px; text-transform: uppercase; border: 2px solid var(--gold);
+      border-radius: 50px; cursor: pointer; transition: all 0.3s;
     }
+    .rsvp-btn:hover { background: var(--gold); color: var(--maroon); transform: translateY(-2px); }
 
-    .rsvp-btn:hover {
-      background: var(--gold);
-      color: var(--maroon);
-      box-shadow: 0 5px 25px var(--gold-glow);
-      transform: translateY(-2px);
-    }
+    /* ===== Footer ===== */
+    .footer { background: #2a0010; text-align: center; padding: 40px 20px; }
+    .footer-names { font-family: var(--font-script); font-size: 2rem; color: var(--gold); margin-bottom: 8px; }
+    .footer-date { font-family: var(--font-serif); font-size: 0.9rem; color: var(--gold-light); letter-spacing: 2px; margin-bottom: 15px; }
+    .footer-heart { font-size: 1.2rem; color: var(--gold); margin-bottom: 15px; animation: heartbeat 1.5s infinite; }
+    .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
-    /* ========== Footer ========== */
-    .footer {
-      background: #2a0010;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .footer-names {
-      font-family: var(--font-script);
-      font-size: 2.5rem;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .footer-date {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      color: var(--gold-light);
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-    }
-
-    .footer-heart {
-      font-size: 1.5rem;
-      color: var(--gold);
-      margin-bottom: 20px;
-      animation: heartbeat 1.5s infinite;
-    }
-
-    .footer-text {
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.4);
-    }
-
-    /* ========== Music Toggle ========== */
+    /* ===== Music Toggle ===== */
     .music-toggle {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      width: 55px;
-      height: 55px;
-      background: var(--maroon);
-      border: 2px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 1500;
-      transition: all 0.3s;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+      position: fixed; bottom: 25px; right: 25px; width: 48px; height: 48px;
+      background: var(--maroon); border: 2px solid var(--gold); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 1500; transition: all 0.3s;
     }
+    .music-toggle:hover { transform: scale(1.1); }
+    .music-toggle.playing { animation: pulse 1.5s infinite; }
+    .music-toggle svg { width: 20px; height: 20px; fill: var(--gold); }
 
-    .music-toggle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 5px 25px rgba(212, 168, 67, 0.3);
-    }
+    /* ===== Scroll Animations ===== */
+    .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+    .animate-on-scroll.slide-left { transform: translateX(-30px); }
+    .animate-on-scroll.slide-left.visible { transform: translateX(0); }
+    .animate-on-scroll.slide-right { transform: translateX(30px); }
+    .animate-on-scroll.slide-right.visible { transform: translateX(0); }
 
-    .music-toggle.playing {
-      animation: pulse 1.5s infinite;
-    }
-
-    .music-toggle svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--gold);
-    }
-
-    /* ========== Scroll Animations ========== */
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .animate-on-scroll.slide-left {
-      transform: translateX(-40px);
-    }
-
-    .animate-on-scroll.slide-left.visible {
-      transform: translateX(0);
-    }
-
-    .animate-on-scroll.slide-right {
-      transform: translateX(40px);
-    }
-
-    .animate-on-scroll.slide-right.visible {
-      transform: translateX(0);
-    }
-
-    /* ========== Keyframes ========== */
+    /* ===== Keyframes ===== */
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-      40% { transform: translateX(-50%) translateY(-15px); }
-      60% { transform: translateX(-50%) translateY(-8px); }
+      0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-12px); }
+      60% { transform: translateX(-50%) translateY(-6px); }
     }
-
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.4); }
-      70% { box-shadow: 0 0 0 15px rgba(212, 168, 67, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(212, 168, 67, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(212,168,67,0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(212,168,67,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,168,67,0); }
     }
-
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
-
+    @keyframes heartbeat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.2); } }
     @keyframes floatPetal {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.15; }
-      25% { transform: translate(30px, -40px) rotate(90deg); opacity: 0.25; }
-      50% { transform: translate(-20px, -80px) rotate(180deg); opacity: 0.15; }
-      75% { transform: translate(40px, -40px) rotate(270deg); opacity: 0.25; }
+      0%,100% { transform: translate(0,0) rotate(0); opacity: 0.15; }
+      25% { transform: translate(30px,-40px) rotate(90deg); opacity: 0.25; }
+      50% { transform: translate(-20px,-80px) rotate(180deg); opacity: 0.15; }
+      75% { transform: translate(40px,-40px) rotate(270deg); opacity: 0.25; }
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-content > * {
-      animation: fadeIn 1s ease forwards;
-    }
-
+    @keyframes fadeIn { from { opacity:0; transform:translateY(15px); } to { opacity:1; transform:translateY(0); } }
+    .hero-content > * { animation: fadeIn 1s ease forwards; }
     .hero-content > *:nth-child(1) { animation-delay: 0.2s; opacity: 0; }
     .hero-content > *:nth-child(2) { animation-delay: 0.5s; opacity: 0; }
     .hero-content > *:nth-child(3) { animation-delay: 0.8s; opacity: 0; }
     .hero-content > *:nth-child(4) { animation-delay: 1.1s; opacity: 0; }
     .hero-content > *:nth-child(5) { animation-delay: 1.4s; opacity: 0; }
 
-    /* ========== Responsive ========== */
+    /* ===== Responsive ===== */
     @media (max-width: 1024px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
     @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-
+      .hamburger { display: flex; }
       .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(128, 0, 32, 0.98);
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 0;
-        gap: 20px;
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(128,0,32,0.98); flex-direction: column;
+        align-items: center; padding: 25px 0; gap: 18px;
       }
-
-      .nav-links.active {
-        display: flex;
+      .nav-links.active { display: flex; }
+      .hero-names { font-size: 3rem; }
+      .hero-invite { font-size: 0.8rem; letter-spacing: 2px; }
+      .hero-date { font-size: 1rem; letter-spacing: 3px; }
+      .section { padding: 60px 0; }
+      .section-title { font-size: 2.2rem; }
+      .about-content { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+      .about-image { width: 220px; height: 220px; }
+      .countdown-boxes { gap: 12px; }
+      .countdown-box { min-width: 80px; padding: 15px 12px; }
+      .countdown-number { font-size: 2rem; }
+      .timeline::before { left: 15px; }
+      .timeline-item, .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        width: 100%; margin-left: 0; padding-left: 50px; padding-right: 10px; justify-content: flex-start;
       }
-
-      .hero-names {
-        font-size: 3.5rem;
-      }
-
-      .hero-invite {
-        font-size: 0.9rem;
-        letter-spacing: 2px;
-      }
-
-      .hero-date {
-        font-size: 1.1rem;
-        letter-spacing: 3px;
-      }
-
-      .section {
-        padding: 70px 0;
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-      }
-
-      .about-image {
-        width: 250px;
-        height: 250px;
-      }
-
-      .countdown-boxes {
-        gap: 15px;
-      }
-
-      .countdown-box {
-        min-width: 110px;
-        padding: 20px 15px;
-      }
-
-      .countdown-number {
-        font-size: 2.5rem;
-      }
-
-      /* Timeline mobile */
-      .timeline::before {
-        left: 20px;
-      }
-
-      .timeline-item,
-      .timeline-item:nth-child(odd),
-      .timeline-item:nth-child(even) {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 60px;
-        padding-right: 10px;
-        justify-content: flex-start;
-      }
-
       .timeline-item:nth-child(odd) .timeline-dot,
-      .timeline-item:nth-child(even) .timeline-dot {
-        left: -5px;
-        right: auto;
-      }
-
-      .timeline-card {
-        max-width: 100%;
-      }
-
-      .rsvp-contact {
-        flex-direction: column;
-        align-items: center;
-      }
+      .timeline-item:nth-child(even) .timeline-dot { left: -5px; right: auto; }
+      .timeline-card { max-width: 100%; }
+      .rsvp-contact { flex-direction: column; align-items: center; }
+      .showcase-grid { grid-template-columns: 1fr; }
+      .showcase-card img { height: 220px; }
     }
-
     @media (max-width: 480px) {
-      .hero-names {
-        font-size: 2.5rem;
-      }
-
-      .hero-ampersand {
-        font-size: 2rem;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .countdown-boxes {
-        gap: 10px;
-      }
-
-      .countdown-box {
-        min-width: 70px;
-        padding: 15px 10px;
-      }
-
-      .countdown-number {
-        font-size: 2rem;
-      }
-
-      .countdown-label {
-        font-size: 0.7rem;
-        letter-spacing: 1px;
-      }
-
-      .about-names {
-        flex-direction: column;
-        gap: 30px;
-      }
+      .hero-names { font-size: 2.2rem; }
+      .hero-ampersand { font-size: 1.5rem; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .about-names { flex-direction: column; gap: 20px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========== Navigation ========== -->
+  <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#hero" class="nav-logo">S & S</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero">Home</a></li>
@@ -1223,21 +410,17 @@
         <li><a href="#countdown">Countdown</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#video">Video</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#video">Photos</a></li>
+        <li><a href="#rsvp">Wishes</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ========== Hero Section ========== -->
+  <!-- Hero -->
   <section class="hero" id="hero">
     <div class="hero-decoration">
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
-      <div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
     </div>
     <div class="hero-content">
       <p class="hero-invite">Celebrating the wedding of</p>
@@ -1246,9 +429,7 @@
         <span class="hero-ampersand">&</span>
         Sai Mahesh
       </h1>
-      <div class="hero-divider">
-        <span>&#10087;</span>
-      </div>
+      <div class="hero-divider"><span>&#10087;</span></div>
       <p class="hero-date">November 27, 2025</p>
     </div>
     <div class="scroll-indicator">
@@ -1256,39 +437,31 @@
     </div>
   </section>
 
-  <!-- ========== About Section ========== -->
+  <!-- About -->
   <section class="about section" id="about">
     <div class="container">
       <h2 class="section-title animate-on-scroll">Our Story</h2>
       <div class="divider animate-on-scroll"><span>&#10087;</span></div>
       <div class="about-content">
         <div class="about-image-wrapper animate-on-scroll slide-left">
-          <div class="about-image" id="couplePhoto">
-            <img src="assets/images/sravani.JPG" alt="Sravani & Sai Mahesh">
+          <div class="about-image">
+            <img src="assets/images/sravani.JPG" alt="Sravani">
           </div>
         </div>
         <div class="about-text animate-on-scroll slide-right">
           <h3>Two Souls, One Journey</h3>
-          <p>
-            Some love stories are written in the stars, and ours is one of them.
-            From the moment our paths crossed, we knew that our lives would be forever intertwined.
-            With the blessings of our families and the grace of the divine, we are embarking on this
-            beautiful journey of togetherness.
-          </p>
-          <p>
-            We are grateful for all the love and blessings that surrounded us on our special day,
-            making it a celebration we will cherish forever.
-          </p>
+          <p>Some love stories are written in the stars, and ours is one of them. From the moment our paths crossed, we knew that our lives would be forever intertwined.</p>
+          <p>We are grateful for all the love and blessings that surrounded us on our special day, making it a celebration we will cherish forever.</p>
           <div class="about-names">
             <div class="about-person">
-              <div class="person-image" id="bridePhoto">
+              <div class="person-image">
                 <img src="assets/images/sravani.JPG" alt="Sravani">
               </div>
               <h4>Sravani</h4>
               <p>The Bride</p>
             </div>
             <div class="about-person">
-              <div class="person-image" id="groomPhoto">
+              <div class="person-image">
                 <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
               </div>
               <h4>Sai Mahesh</h4>
@@ -1300,7 +473,7 @@
     </div>
   </section>
 
-  <!-- ========== Countdown Section ========== -->
+  <!-- Countdown -->
   <section class="countdown section" id="countdown">
     <div class="container">
       <h2 class="section-title animate-on-scroll">Happily Married</h2>
@@ -1327,93 +500,77 @@
     </div>
   </section>
 
-  <!-- ========== Events Timeline ========== -->
+  <!-- Events -->
   <section class="events section" id="events">
     <div class="container">
       <h2 class="section-title animate-on-scroll">Wedding Events</h2>
       <div class="divider animate-on-scroll"><span>&#10087;</span></div>
       <div class="timeline">
-        <!-- Sangeet -->
         <div class="timeline-item animate-on-scroll slide-left">
           <div class="timeline-dot">&#127925;</div>
           <div class="timeline-card">
             <h3>Sangeet Ceremony</h3>
             <div class="event-date">November 25, 2025 | Evening</div>
             <div class="event-venue">Venue details</div>
-            <p>A magical evening filled with music, dance performances, and joyful celebrations with family and friends.</p>
+            <p>A magical evening filled with music, dance performances, and joyful celebrations.</p>
           </div>
         </div>
-        <!-- Haldi -->
         <div class="timeline-item animate-on-scroll slide-right">
           <div class="timeline-dot">&#127804;</div>
           <div class="timeline-card">
             <h3>Haldi Ceremony</h3>
             <div class="event-date">November 26, 2025 | Morning</div>
             <div class="event-venue">Venue details</div>
-            <p>A joyful morning ritual with turmeric blessings, laughter, and love from family and friends.</p>
+            <p>A joyful morning ritual with turmeric blessings, laughter, and love.</p>
           </div>
         </div>
-        <!-- Wedding -->
         <div class="timeline-item animate-on-scroll slide-left">
           <div class="timeline-dot">&#128141;</div>
           <div class="timeline-card">
             <h3>Wedding Ceremony</h3>
             <div class="event-date">November 27, 2025 | Morning</div>
             <div class="event-venue">Venue details</div>
-            <p>The sacred ceremony where two hearts united. The holy vows of togetherness, blessed by family and the divine.</p>
+            <p>The sacred ceremony where two hearts united with holy vows of togetherness.</p>
           </div>
         </div>
-        <!-- Reception -->
         <div class="timeline-item animate-on-scroll slide-right">
           <div class="timeline-dot">&#127881;</div>
           <div class="timeline-card">
             <h3>Grand Reception</h3>
             <div class="event-date">November 28, 2025 | Evening</div>
             <div class="event-venue">Venue details</div>
-            <p>A grand evening of celebration, fine dining, and making memories that will last a lifetime.</p>
+            <p>A grand evening of celebration, fine dining, and memories that last a lifetime.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== Gallery Section ========== -->
+  <!-- Gallery -->
   <section class="gallery section" id="gallery">
     <div class="container">
       <h2 class="section-title animate-on-scroll">Moments to Cherish</h2>
       <div class="divider animate-on-scroll"><span>&#10087;</span></div>
       <div class="gallery-grid">
-        <div class="gallery-item animate-on-scroll" data-index="1">
+        <div class="gallery-item animate-on-scroll">
           <img src="assets/images/sravani.JPG" alt="Sravani" loading="lazy">
           <div class="pin-overlay"><span>Sravani</span></div>
         </div>
-        <div class="gallery-item animate-on-scroll" data-index="2">
+        <div class="gallery-item animate-on-scroll">
           <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh" loading="lazy">
           <div class="pin-overlay"><span>Sai Mahesh</span></div>
         </div>
-        <div class="gallery-item animate-on-scroll" data-index="3">
-          <div class="gallery-placeholder">
-            <span class="camera-icon">&#128247;</span>
-            <span>Add More Photos</span>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <div class="gallery-placeholder"><span class="camera-icon">&#128247;</span><span>Add More Photos</span></div>
         </div>
-        <div class="gallery-item animate-on-scroll" data-index="4">
-          <div class="gallery-placeholder">
-            <span class="camera-icon">&#128247;</span>
-            <span>Add More Photos</span>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <div class="gallery-placeholder"><span class="camera-icon">&#128247;</span><span>Add More Photos</span></div>
         </div>
-        <div class="gallery-item animate-on-scroll" data-index="5">
-          <div class="gallery-placeholder">
-            <span class="camera-icon">&#128247;</span>
-            <span>Add More Photos</span>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <div class="gallery-placeholder"><span class="camera-icon">&#128247;</span><span>Add More Photos</span></div>
         </div>
-        <div class="gallery-item animate-on-scroll" data-index="6">
-          <div class="gallery-placeholder">
-            <span class="camera-icon">&#128247;</span>
-            <span>Add More Photos</span>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <div class="gallery-placeholder"><span class="camera-icon">&#128247;</span><span>Add More Photos</span></div>
         </div>
       </div>
     </div>
@@ -1425,29 +582,20 @@
     <img src="" alt="Gallery Image" id="lightboxImg">
   </div>
 
-  <!-- ========== Video Section ========== -->
+  <!-- Photos Showcase -->
   <section class="video-section section" id="video">
     <div class="container">
-      <h2 class="section-title animate-on-scroll">Our Story</h2>
-      <p class="section-subtitle animate-on-scroll">A Glimpse of Our Beautiful Journey</p>
+      <h2 class="section-title animate-on-scroll">Our Beautiful Journey</h2>
+      <p class="section-subtitle animate-on-scroll">Moments We Treasure</p>
       <div class="showcase-grid animate-on-scroll">
-        <!-- Sravani -->
         <div class="showcase-card">
           <img src="assets/images/sravani.JPG" alt="Sravani">
-          <div class="showcase-label">
-            <h3>Sravani</h3>
-            <p>THE BRIDE</p>
-          </div>
+          <div class="showcase-label"><h3>Sravani</h3><p>THE BRIDE</p></div>
         </div>
-        <!-- Sai Mahesh -->
         <div class="showcase-card">
           <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
-          <div class="showcase-label">
-            <h3>Sai Mahesh</h3>
-            <p>THE GROOM</p>
-          </div>
+          <div class="showcase-label"><h3>Sai Mahesh</h3><p>THE GROOM</p></div>
         </div>
-        <!-- Together text -->
         <div class="showcase-together">
           <h3>Two Souls, One Love</h3>
           <p>NOVEMBER 27, 2025 &bull; FOREVER TOGETHER</p>
@@ -1456,17 +604,13 @@
     </div>
   </section>
 
-  <!-- ========== RSVP Section ========== -->
+  <!-- Wishes -->
   <section class="rsvp section" id="rsvp">
     <div class="container">
       <h2 class="section-title animate-on-scroll">Thank You</h2>
       <div class="divider animate-on-scroll"><span>&#10087;</span></div>
       <div class="rsvp-content animate-on-scroll">
-        <p class="rsvp-text">
-          Thank you for being a part of our beautiful journey.
-          Your love and blessings made our special day truly memorable.
-          We are forever grateful!
-        </p>
+        <p class="rsvp-text">Thank you for being a part of our beautiful journey. Your love and blessings made our special day truly memorable. We are forever grateful!</p>
         <div class="rsvp-contact">
           <div class="contact-item">
             <div class="contact-icon">
@@ -1481,14 +625,12 @@
             <span>email@example.com</span>
           </div>
         </div>
-        <a href="mailto:email@example.com?subject=Wishes%20-%20Sravani%20%26%20Sai%20Mahesh" class="rsvp-btn">
-          Send Wishes
-        </a>
+        <a href="mailto:email@example.com?subject=Wishes%20-%20Sravani%20%26%20Sai%20Mahesh" class="rsvp-btn">Send Wishes</a>
       </div>
     </div>
   </section>
 
-  <!-- ========== Footer ========== -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-names">Sravani & Sai Mahesh</div>
     <div class="footer-date">November 27, 2025</div>
@@ -1496,161 +638,83 @@
     <p class="footer-text">Made with love</p>
   </footer>
 
-  <!-- ========== Music Toggle ========== -->
+  <!-- Music Toggle -->
   <button class="music-toggle" id="musicToggle" aria-label="Toggle music" title="Toggle Background Music">
-    <svg id="musicIcon" viewBox="0 0 24 24">
-      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
-    </svg>
+    <svg id="musicIcon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
   </button>
 
-  <!-- ========== JavaScript ========== -->
   <script>
-    // ===== Countdown Timer =====
+    // Countdown (counting UP since wedding passed)
     (function() {
-      const targetDate = new Date('2025-11-27T10:00:00').getTime();
-      const weddingPassed = true;
-      const daysEl = document.getElementById('days');
-      const hoursEl = document.getElementById('hours');
-      const minutesEl = document.getElementById('minutes');
-      const secondsEl = document.getElementById('seconds');
-      const messageEl = document.getElementById('countdownMessage');
-
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
-
-        // Count UP from wedding date (since it already happened)
-        const elapsed = now - targetDate;
-
-        const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((elapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((elapsed % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((elapsed % (1000 * 60)) / 1000);
-
-        daysEl.textContent = String(days).padStart(2, '0');
-        hoursEl.textContent = String(hours).padStart(2, '0');
-        minutesEl.textContent = String(minutes).padStart(2, '0');
-        secondsEl.textContent = String(seconds).padStart(2, '0');
+      var target = new Date('2025-11-27T10:00:00').getTime();
+      var d = document.getElementById('days'), h = document.getElementById('hours');
+      var m = document.getElementById('minutes'), s = document.getElementById('seconds');
+      function update() {
+        var elapsed = Date.now() - target;
+        d.textContent = String(Math.floor(elapsed / 86400000)).padStart(2, '0');
+        h.textContent = String(Math.floor((elapsed % 86400000) / 3600000)).padStart(2, '0');
+        m.textContent = String(Math.floor((elapsed % 3600000) / 60000)).padStart(2, '0');
+        s.textContent = String(Math.floor((elapsed % 60000) / 1000)).padStart(2, '0');
       }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
+      update(); setInterval(update, 1000);
     })();
 
-    // ===== Scroll Animations =====
+    // Scroll animations
     (function() {
-      const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
       }, { threshold: 0.15 });
-
-      document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
-        observer.observe(el);
-      });
+      document.querySelectorAll('.animate-on-scroll').forEach(function(el) { obs.observe(el); });
     })();
 
-    // ===== Navbar Scroll Effect =====
+    // Navbar scroll
     (function() {
-      const navbar = document.getElementById('navbar');
+      var nav = document.getElementById('navbar');
       window.addEventListener('scroll', function() {
-        if (window.scrollY > 80) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
+        nav.classList.toggle('scrolled', window.scrollY > 80);
       });
     })();
 
-    // ===== Mobile Menu Toggle =====
+    // Mobile menu
     (function() {
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
-
-      hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-      });
-
-      // Close menu on link click
-      navLinks.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
-          navLinks.classList.remove('active');
-          hamburger.classList.remove('active');
-        });
+      var btn = document.getElementById('hamburger'), links = document.getElementById('navLinks');
+      btn.addEventListener('click', function() { links.classList.toggle('active'); });
+      links.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { links.classList.remove('active'); });
       });
     })();
 
-    // ===== Gallery Lightbox =====
+    // Lightbox
     (function() {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightboxImg');
-      const lightboxClose = document.getElementById('lightboxClose');
-
+      var lb = document.getElementById('lightbox'), img = document.getElementById('lightboxImg');
       document.querySelectorAll('.gallery-item').forEach(function(item) {
         item.addEventListener('click', function() {
-          const img = this.querySelector('img');
-          if (img) {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-          }
+          var i = this.querySelector('img');
+          if (i) { img.src = i.src; lb.classList.add('active'); }
         });
       });
-
-      lightboxClose.addEventListener('click', function() {
-        lightbox.classList.remove('active');
-      });
-
-      lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox) {
-          lightbox.classList.remove('active');
-        }
-      });
-
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          lightbox.classList.remove('active');
-        }
-      });
+      document.getElementById('lightboxClose').addEventListener('click', function() { lb.classList.remove('active'); });
+      lb.addEventListener('click', function(e) { if (e.target === lb) lb.classList.remove('active'); });
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') lb.classList.remove('active'); });
     })();
 
-    // ===== Music Toggle =====
+    // Music
     (function() {
-      const musicToggle = document.getElementById('musicToggle');
-      const musicIcon = document.getElementById('musicIcon');
-      let audio = null;
-      let isPlaying = false;
-
-      musicToggle.addEventListener('click', function() {
-        if (!audio) {
-          audio = new Audio('assets/audio/wedding-music.mp3');
-          audio.loop = true;
-        }
-
-        if (isPlaying) {
-          audio.pause();
-          musicToggle.classList.remove('playing');
-          musicIcon.innerHTML = '<path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>';
-        } else {
-          audio.play().catch(function() {});
-          musicToggle.classList.add('playing');
-          musicIcon.innerHTML = '<path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/><line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="2"/>';
-        }
-        isPlaying = !isPlaying;
+      var btn = document.getElementById('musicToggle'), audio = null, playing = false;
+      btn.addEventListener('click', function() {
+        if (!audio) { audio = new Audio('assets/audio/wedding-music.mp3'); audio.loop = true; }
+        if (playing) { audio.pause(); btn.classList.remove('playing'); }
+        else { audio.play().catch(function(){}); btn.classList.add('playing'); }
+        playing = !playing;
       });
     })();
 
-    // ===== Smooth scroll for nav (fallback) =====
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      anchor.addEventListener('click', function(e) {
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+        var t = document.querySelector(this.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
       });
     });
   </script>
