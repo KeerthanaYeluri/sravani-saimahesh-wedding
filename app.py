@@ -4,7 +4,7 @@ import os
 
 st.set_page_config(
     page_title="Sravani & Sai Mahesh | Wedding",
-    page_icon="💍",
+    page_icon="ring",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -31,10 +31,10 @@ def get_image_base64(image_path):
             return base64.b64encode(f.read()).decode()
     return None
 
-# Get base64 encoded images
+# Get base64 encoded images (compressed versions)
 base_dir = os.path.dirname(os.path.abspath(__file__))
-sravani_b64 = get_image_base64(os.path.join(base_dir, "assets", "images", "sravani.JPG"))
-saimahesh_b64 = get_image_base64(os.path.join(base_dir, "assets", "images", "SaiMahesh.JPG"))
+sravani_b64 = get_image_base64(os.path.join(base_dir, "assets", "images", "sravani_compressed.jpg"))
+saimahesh_b64 = get_image_base64(os.path.join(base_dir, "assets", "images", "saimahesh_compressed.jpg"))
 
 # Read the HTML file
 with open(os.path.join(base_dir, "index.html"), "r", encoding="utf-8") as f:
@@ -44,13 +44,13 @@ with open(os.path.join(base_dir, "index.html"), "r", encoding="utf-8") as f:
 if sravani_b64:
     html_content = html_content.replace(
         'src="assets/images/sravani.JPG"',
-        f'src="data:image/jpeg;base64,{sravani_b64}"'
+        'src="data:image/jpeg;base64,' + sravani_b64 + '"'
     )
 
 if saimahesh_b64:
     html_content = html_content.replace(
         'src="assets/images/SaiMahesh.JPG"',
-        f'src="data:image/jpeg;base64,{saimahesh_b64}"'
+        'src="data:image/jpeg;base64,' + saimahesh_b64 + '"'
     )
 
 # Render the full HTML page
