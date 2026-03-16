@@ -330,7 +330,7 @@
       opacity: 0.7;
     }
 
-    /* ========== About Section ========== */
+    /* ========== About Section - Pinterest Style ========== */
     .about {
       background: var(--cream);
     }
@@ -348,30 +348,25 @@
     }
 
     .about-image {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      border: 5px solid var(--gold);
-      box-shadow: 0 0 30px var(--gold-glow), 0 10px 40px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      border: 4px solid var(--gold);
+      box-shadow: 0 0 30px var(--gold-glow), 0 15px 40px rgba(0,0,0,0.15);
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative;
       background: linear-gradient(135deg, var(--maroon), var(--deep-red));
-    }
-
-    .about-image .placeholder-text {
-      color: var(--gold-light);
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      text-align: center;
-      padding: 20px;
     }
 
     .about-image img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
     }
 
     .about-text h3 {
@@ -390,8 +385,8 @@
 
     .about-names {
       display: flex;
-      gap: 40px;
-      margin-top: 30px;
+      gap: 30px;
+      margin-top: 40px;
     }
 
     .about-person {
@@ -400,27 +395,39 @@
     }
 
     .about-person .person-image {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      width: 100%;
+      max-width: 220px;
+      border-radius: 15px;
       border: 3px solid var(--gold);
       margin: 0 auto 15px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      position: relative;
       background: linear-gradient(135deg, var(--cream), var(--gold-light));
+    }
+
+    .about-person .person-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .about-person .person-image:hover img {
+      transform: scale(1.05);
     }
 
     .about-person .person-image .placeholder-icon {
       font-size: 2.5rem;
       opacity: 0.5;
+      padding: 40px;
     }
 
     .about-person h4 {
       font-family: var(--font-serif);
       font-size: 1.3rem;
       color: var(--maroon);
+      margin-top: 10px;
     }
 
     .about-person p {
@@ -616,50 +623,79 @@
       line-height: 1.7;
     }
 
-    /* ========== Gallery Section ========== */
+    /* ========== Gallery Section - Pinterest Masonry ========== */
     .gallery {
       background: var(--ivory);
     }
 
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      columns: 3;
+      column-gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .gallery-item {
-      aspect-ratio: 1;
-      border-radius: 15px;
+      break-inside: avoid;
+      margin-bottom: 20px;
+      border-radius: 20px;
       overflow: hidden;
       cursor: pointer;
       position: relative;
       background: linear-gradient(135deg, var(--cream), var(--gold-light));
-      border: 2px solid rgba(212, 168, 67, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid rgba(212, 168, 67, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
     .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
 
     .gallery-item img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Pinterest-style overlay on hover */
+    .gallery-item .pin-overlay {
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(128, 0, 32, 0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+
+    .gallery-item:hover .pin-overlay {
+      opacity: 1;
+    }
+
+    .pin-overlay span {
+      color: var(--gold);
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 2px;
     }
 
     .gallery-placeholder {
       text-align: center;
       color: var(--maroon);
-      opacity: 0.5;
+      opacity: 0.4;
+      padding: 60px 20px;
     }
 
     .gallery-placeholder .camera-icon {
@@ -1110,7 +1146,7 @@
     /* ========== Responsive ========== */
     @media (max-width: 1024px) {
       .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        columns: 2;
       }
     }
 
@@ -1165,8 +1201,7 @@
       }
 
       .about-image {
-        width: 250px;
-        height: 250px;
+        max-width: 300px;
       }
 
       .countdown-boxes {
@@ -1223,7 +1258,7 @@
       }
 
       .gallery-grid {
-        grid-template-columns: 1fr;
+        columns: 1;
       }
 
       .countdown-boxes {
@@ -1327,14 +1362,14 @@
           <div class="about-names">
             <div class="about-person">
               <div class="person-image" id="bridePhoto">
-                <img src="assets/images/sravani.JPG" alt="Sravani" style="width:100%;height:100%;object-fit:cover;">
+                <img src="assets/images/sravani.JPG" alt="Sravani">
               </div>
               <h4>Sravani</h4>
               <p>The Bride</p>
             </div>
             <div class="about-person">
               <div class="person-image" id="groomPhoto">
-                <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh" style="width:100%;height:100%;object-fit:cover;">
+                <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh">
               </div>
               <h4>Sai Mahesh</h4>
               <p>The Groom</p>
@@ -1430,44 +1465,34 @@
       <div class="gallery-grid">
         <div class="gallery-item animate-on-scroll" data-index="1">
           <img src="assets/images/sravani.JPG" alt="Sravani" loading="lazy">
+          <div class="pin-overlay"><span>Sravani</span></div>
         </div>
         <div class="gallery-item animate-on-scroll" data-index="2">
           <img src="assets/images/SaiMahesh.JPG" alt="Sai Mahesh" loading="lazy">
+          <div class="pin-overlay"><span>Sai Mahesh</span></div>
         </div>
         <div class="gallery-item animate-on-scroll" data-index="3">
           <div class="gallery-placeholder">
             <span class="camera-icon">&#128247;</span>
-            <span>Photo Coming Soon</span>
+            <span>Add More Photos</span>
           </div>
         </div>
         <div class="gallery-item animate-on-scroll" data-index="4">
           <div class="gallery-placeholder">
             <span class="camera-icon">&#128247;</span>
-            <span>Photo Coming Soon</span>
+            <span>Add More Photos</span>
           </div>
         </div>
         <div class="gallery-item animate-on-scroll" data-index="5">
           <div class="gallery-placeholder">
             <span class="camera-icon">&#128247;</span>
-            <span>Photo Coming Soon</span>
+            <span>Add More Photos</span>
           </div>
         </div>
         <div class="gallery-item animate-on-scroll" data-index="6">
           <div class="gallery-placeholder">
             <span class="camera-icon">&#128247;</span>
-            <span>Photo Coming Soon</span>
-          </div>
-        </div>
-        <div class="gallery-item animate-on-scroll" data-index="7">
-          <div class="gallery-placeholder">
-            <span class="camera-icon">&#128247;</span>
-            <span>Photo Coming Soon</span>
-          </div>
-        </div>
-        <div class="gallery-item animate-on-scroll" data-index="8">
-          <div class="gallery-placeholder">
-            <span class="camera-icon">&#128247;</span>
-            <span>Photo Coming Soon</span>
+            <span>Add More Photos</span>
           </div>
         </div>
       </div>

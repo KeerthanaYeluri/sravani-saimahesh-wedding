@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(start:*)",
+      "Bash(git:*)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(where gh:*)",
+      "Bash(npx surge:*)",
+      "Bash(zip:*)",
+      "Bash(powershell -Command \"Compress-Archive -Path 'C:\\\\Users\\\\sysadmin\\\\PycharmProjects\\\\PythonProject\\\\PythonProject\\\\stepbystep\\\\index.html','C:\\\\Users\\\\sysadmin\\\\PycharmProjects\\\\PythonProject\\\\PythonProject\\\\stepbystep\\\\assets' -DestinationPath 'C:\\\\Users\\\\sysadmin\\\\PycharmProjects\\\\PythonProject\\\\PythonProject\\\\stepbystep\\\\site.zip' -Force\")",
+      "Bash(curl:*)"
+    ]
+  }
+}
